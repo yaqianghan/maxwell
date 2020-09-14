@@ -30,7 +30,7 @@ function process_row(row) {
 			row.suppress();
 		} else if ( row.table == "sharded" ) {
 			if ( row.type == "insert" ) {
-				row.data.put("password", "XXXXXXXX");
+				row.data.put("password", "XXXXXXXX"); // 插入自定义数据
 			}
 		} else if ( row.table == "other" ) {
 			row.kafka_topic = "other_kafka_topic";
